@@ -13,7 +13,7 @@ $(function () {
     $score.text("Score X:" + xScore + "    O:" + oScore);
 
 
-    startGame();
+    startGame(); //calling startGame function
 
     $start.on("click", function () {
         startGame();
@@ -30,20 +30,25 @@ $(function () {
         message($turn + " starts the game");
     }
 
+   //updates status message
     function message(msg) {
         $("#status").text(msg);
     }
 
+    function draw() {
+        if ($count == 9) {
+            message("draw!");
+        }
+    }
+    
+    //when the box clicked call nextMove() 
     $box.on("click", function () {
-        
         nextMove($(this));
-   
     })
 
     function nextMove(box) {
         if ($winner != null || $count == 9) {
             message(" Replay !");
-
         }
         else if (box.text() == '') {
             box.text($turn);
@@ -54,12 +59,6 @@ $(function () {
         }
     }
 
-    function draw() {
-        if ($count == 9) {
-            message("draw!");
-        }
-    }
-    
     function switchTurn() {
         if (winner($turn)) {
             message("congrats, " + $turn + " won!");
@@ -81,25 +80,28 @@ $(function () {
             message($turn + "'s turn");
             $count++;
         }
-        // message("congrats ");
+        
     }
-    function winner(move) {
+
+    //takes 
+    function winner(play) {
         var result = false;
-        if (checkLine(1, 2, 3, move) ||
-            checkLine(4, 5, 6, move) ||
-            checkLine(7, 8, 9, move) ||
-            checkLine(1, 4, 7, move) ||
-            checkLine(2, 5, 8, move) ||
-            checkLine(3, 6, 9, move) ||
-            checkLine(1, 5, 9, move) ||
-            checkLine(3, 5, 7, move)) {
+        if (checkLine(1, 2, 3, play) ||
+            checkLine(4, 5, 6, play) ||
+            checkLine(7, 8, 9, play) ||
+            checkLine(1, 4, 7, play) ||
+            checkLine(2, 5, 8, play) ||
+            checkLine(3, 6, 9, play) ||
+            checkLine(1, 5, 9, play) ||
+            checkLine(3, 5, 7, play)) {
             result = true;
         }
         return result;
     }
-    function checkLine(a, b, c, move) {
+
+    function checkLine(a, b, c, play) {
         var result = false;
-        if (getBox(a) == move && getBox(b) == move && getBox(c) == move) {
+        if (getBox(a) == play && getBox(b) == play && getBox(c) == play) {
             result = true;
         }
         return result;
@@ -107,14 +109,10 @@ $(function () {
 
     function getBox(number) {
         return $("#box" + number).text();
-        //console.log($("#box"+number));
-    }
+     }
 
     $replay.on("click", function () {
         startGame();
-        //$(this).prepend('<img id="theImg" src="images/o.png" />');
     })
-
-
 
 })
