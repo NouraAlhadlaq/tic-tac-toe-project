@@ -27,7 +27,7 @@ $(function () {
         for (var i = 0; i <= $box.length; i++) {
             $("#box" + i).text("");
         }
-        message($turn + " starts");
+        message($turn + " starts the game");
     }
 
     function message(msg) {
@@ -35,34 +35,31 @@ $(function () {
     }
 
     $box.on("click", function () {
-        // if(count < 9){
-        //     nextMove($(this));
-        // }
-        // else if(count == 9 && $winner == null){
-        //    message("draw!")
-        // }else {
-            nextMove($(this));
-        // }
-        //$(this).prepend('<img id="theImg" src="images/o.png" />');
+        
+        nextMove($(this));
+   
     })
 
     function nextMove(box) {
-        if ($winner != null) {
+        if ($winner != null || $count == 9) {
             message(" Replay !");
 
-        } 
+        }
         else if (box.text() == '') {
             box.text($turn);
             switchTurn();
-        } 
+        }
         else {
             message("pick another place!");
         }
     }
 
-    function draw(){
-        message
+    function draw() {
+        if ($count == 9) {
+            message("draw!");
+        }
     }
+    
     function switchTurn() {
         if (winner($turn)) {
             message("congrats, " + $turn + " won!");
@@ -78,6 +75,7 @@ $(function () {
             $turn = "o";
             message($turn + "'s turn");
             $count++;
+            draw();
         } else if ($turn == "o") {
             $turn = "x";
             message($turn + "'s turn");
