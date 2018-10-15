@@ -4,7 +4,8 @@
 }
 
 body{
-    background-color: pink;
+    /* background-color: grey; */
+    background-image: url(images/paper2.jpg);
     width: 350px;
     margin: auto;
 }
@@ -12,7 +13,7 @@ h1{
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     border-bottom: 3pt solid black;
     display: inline;
-    font-size: 70px;
+    font-size: 81px;
     text-align: center;
     
 }
@@ -32,28 +33,38 @@ a{
     
 }
 button{
-    background-color: grey;
-    border: gray;
+
+    background-color: Transparent;
+    border: none;
+    position: relative;
+    bottom: -10px;
+    left: 100px;
+    width: 115px;
+}
+a{
+    /* background-color: grey; */
+    /* border: gray; */
+    text-decoration: unset;
+    color: black;
 }
 
-#status, button{
+#status, a, button{
     font-size: 20pt;
     font-family: 'Shadows Into Light', cursive;
 }
 
 .brief{
-    font-size: 17pt;
-    color: #fff;
-    /* font-family: 'Shadows Into Light', cursive; */
+    font-size: 20pt;
+    color: #000000;
+    font-family: 'Shadows Into Light', cursive;
     padding: 5%;
     border-bottom: 3pt solid black;
     text-align: center;
-    font-family: "Raleway";
+    /* font-family: "Raleway"; */
 }
-
 .container{
     overflow: hidden;
-    margin:  auto 0 auto;   
+    margin:  auto 0 auto;  
 }
             
 
@@ -61,7 +72,7 @@ button{
     float: left;
     width: 100px;
     height: 100px;
-    border: 3px solid white;
+    border: 3px solid black;
     font-family: 'Shadows Into Light', cursive;
     font-size: 85px;
     text-align: center;

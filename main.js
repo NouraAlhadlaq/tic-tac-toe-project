@@ -103,6 +103,11 @@ $(function () {
         var result = false;
         if (getBox(a) == play && getBox(b) == play && getBox(c) == play) {
             result = true;
+            
+            $("#box" + a).css("color","rgb(82, 110, 204)");
+            $("#box" + b).css("color","rgb(82, 110, 204)");
+            $("#box" + c).css("color","rgb(82, 110, 204)");
+
         }
         return result;
     }
