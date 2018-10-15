@@ -89,3 +89,15 @@ button {
 .message {
   float: right;
 }
+
+.copyright,
+.message {
+  font-family: "Raleway";
+}
+.copyright {
+  float: left;
+}
+
+.message {
+  float: right;
+}
