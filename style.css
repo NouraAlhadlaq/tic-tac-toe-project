@@ -1,100 +1,95 @@
-*{
-    box-sizing: border-box;
-
+* {
+  box-sizing: border-box;
 }
 
-body{
-    /* background-color: grey; */
-    background-image: url(images/paper2.jpg);
-    width: 350px;
-    margin: auto;
+body {
+  /* background-color: grey; */
+  background-image: url(images/paper2.jpg);
+  width: 350px;
+  margin: auto;
 }
-h1{
-    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
-    border-bottom: 3pt solid black;
-    display: inline;
-    font-size: 81px;
-    text-align: center;
-    
-}
-
-#score{
-    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
-    font-size: 20px;
+h1 {
+  font-family: "Pacifico", Arial, Helvetica, sans-serif;
+  border-bottom: 3pt solid black;
+  display: inline;
+  font-size: 81px;
+  text-align: center;
 }
 
-a{
-    position: relative;
-    bottom: 0;
-    left: 100px;
-    width: 300px;
-    display: inline;
-    text-align: center;
-    
-}
-button{
-
-    background-color: Transparent;
-    border: none;
-    position: relative;
-    bottom: -10px;
-    left: 100px;
-    width: 115px;
-}
-a{
-    /* background-color: grey; */
-    /* border: gray; */
-    text-decoration: unset;
-    color: black;
+#score {
+  font-family: "Pacifico", Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
-#status, a, button{
-    font-size: 20pt;
-    font-family: 'Shadows Into Light', cursive;
+a {
+  position: relative;
+  bottom: 0;
+  left: 100px;
+  width: 300px;
+  display: inline;
+  text-align: center;
+}
+button {
+  background-color: Transparent;
+  border: none;
+  position: relative;
+  bottom: -10px;
+  left: 100px;
+  width: 115px;
+}
+a {
+  /* background-color: grey; */
+  /* border: gray; */
+  text-decoration: unset;
+  color: black;
 }
 
-.brief{
-    font-size: 20pt;
-    color: #000000;
-    font-family: 'Shadows Into Light', cursive;
-    padding: 5%;
-    border-bottom: 3pt solid black;
-    text-align: center;
-    /* font-family: "Raleway"; */
-}
-.container{
-    overflow: hidden;
-    margin:  auto 0 auto;  
-}
-            
-
-.container .box{
-    float: left;
-    width: 100px;
-    height: 100px;
-    border: 3px solid black;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 85px;
-    text-align: center;
-    line-height: 100px; 
-    cursor: pointer;
+#status,
+a,
+button {
+  font-size: 20pt;
+  font-family: "Shadows Into Light", cursive;
 }
 
-            
-.container .box:hover{
-    background: rgba(0, 0, 0, 0.5);
-     color: rgb(225, 225,225)
+.brief {
+  font-size: 20pt;
+  color: #000000;
+  font-family: "Shadows Into Light", cursive;
+  padding: 5%;
+  border-bottom: 3pt solid black;
+  text-align: center;
+  /* font-family: "Raleway"; */
 }
-            
+.container {
+  overflow: hidden;
+  margin: auto 0 auto;
+}
 
-            
-    .copyright, .message{
-        font-family: "Raleway";
-    }
-    .copyright{
-        float: left;
-    }
-    
-    .message{
-        float:right;
-    }
+.container .box {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 85px;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+}
+
+.container .box:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(225, 225, 225);
+}
+
+.copyright,
+.message {
+  font-family: "Raleway";
+}
+.copyright {
+  float: left;
+}
+
+.message {
+  float: right;
+}

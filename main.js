@@ -30,7 +30,7 @@ $(function () {
         message($turn + " starts the game");
     }
 
-   //updates status message
+    //updates status message
     function message(msg) {
         $("#status").text(msg);
     }
@@ -40,7 +40,7 @@ $(function () {
             message("draw!");
         }
     }
-    
+
     //when the box clicked call nextMove() 
     $box.on("click", function () {
         nextMove($(this));
@@ -80,7 +80,7 @@ $(function () {
             message($turn + "'s turn");
             $count++;
         }
-        
+
     }
 
     //takes 
@@ -103,10 +103,10 @@ $(function () {
         var result = false;
         if (getBox(a) == play && getBox(b) == play && getBox(c) == play) {
             result = true;
-            
-            $("#box" + a).css("color","rgb(82, 110, 204)");
-            $("#box" + b).css("color","rgb(82, 110, 204)");
-            $("#box" + c).css("color","rgb(82, 110, 204)");
+
+            $("#box" + a).css("color", "rgb(82, 110, 204)");
+            $("#box" + b).css("color", "rgb(82, 110, 204)");
+            $("#box" + c).css("color", "rgb(82, 110, 204)");
 
         }
         return result;
@@ -114,7 +114,7 @@ $(function () {
 
     function getBox(number) {
         return $("#box" + number).text();
-     }
+    }
 
     $replay.on("click", function () {
         startGame();
