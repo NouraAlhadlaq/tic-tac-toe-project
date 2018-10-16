@@ -38,6 +38,15 @@ a {
   /* border: gray; */
   text-decoration: unset;
   color: black;
+  animation: blinker 1s linear infinite;
+}
+.blinker {
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 #status,
@@ -61,11 +70,39 @@ button {
   margin: auto 0 auto;
 }
 
+#box1 {
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
+#box2 {
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
+#box3 {
+  border-bottom: 3px solid black;
+}
+#box4 {
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
+#box5 {
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
+#box6 {
+  border-bottom: 3px solid black;
+}
+#box7 {
+  border-right: 3px solid black;
+}
+#box8 {
+  border-right: 3px solid black;
+}
+
 .container .box {
   float: left;
   width: 100px;
   height: 100px;
-  border: 3px solid black;
   font-family: "Shadows Into Light", cursive;
   font-size: 85px;
   text-align: center;
