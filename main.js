@@ -12,9 +12,10 @@ $(function() {
 
   startGame(); //calling startGame function
 
+  //Starts the game after clicking start button
   $start.on("click", function() {
     startGame();
-  }); //Starts the game after clicking start button
+  });
 
   function startGame() {
     $turn = "x";
@@ -35,6 +36,7 @@ $(function() {
 
   function draw() {
     if ($count == 9) {
+      swal({ title: "Draw ! ", text: "Play Again!" });
       message("draw!");
     }
   }
@@ -47,7 +49,7 @@ $(function() {
   function nextMove(box) {
     if ($winner != null || $count == 9) {
       message(" Replay !");
-      $("button").addClass("blinker");
+      $(".replay").addClass("blinker");
     } else if (box.text() == "") {
       box.text($turn);
       switchTurn();
@@ -59,6 +61,10 @@ $(function() {
   function switchTurn() {
     if (winner($turn)) {
       message("congrats, " + $turn + " won!");
+      swal({
+        title: "Congrats!  " + $turn,
+        text: "You won!"
+      });
       $winner = $turn;
       if ($turn == "x") {
         xScore++;
@@ -82,21 +88,21 @@ $(function() {
   function winner(play) {
     var result = false;
     if (
-      checkLine(1, 2, 3, play) ||
-      checkLine(4, 5, 6, play) ||
-      checkLine(7, 8, 9, play) ||
-      checkLine(1, 4, 7, play) ||
-      checkLine(2, 5, 8, play) ||
-      checkLine(3, 6, 9, play) ||
-      checkLine(1, 5, 9, play) ||
-      checkLine(3, 5, 7, play)
+      checkWin(1, 2, 3, play) ||
+      checkWin(4, 5, 6, play) ||
+      checkWin(7, 8, 9, play) ||
+      checkWin(1, 4, 7, play) ||
+      checkWin(2, 5, 8, play) ||
+      checkWin(3, 6, 9, play) ||
+      checkWin(1, 5, 9, play) ||
+      checkWin(3, 5, 7, play)
     ) {
       result = true;
     }
     return result;
   }
 
-  function checkLine(a, b, c, play) {
+  function checkWin(a, b, c, play) {
     var result = false;
     if (getBox(a) == play && getBox(b) == play && getBox(c) == play) {
       result = true;

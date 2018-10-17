@@ -1,6 +1,7 @@
 body {
   /* background-color: grey; */
   background-image: url(images/paper2.jpg);
+  background-size: cover;
   width: 350px;
   margin: auto;
 }
@@ -25,13 +26,14 @@ a {
   display: inline;
   text-align: center;
 }
-button {
+.replay {
   background-color: Transparent;
   border: none;
   position: relative;
   bottom: -10px;
   left: 100px;
   width: 115px;
+  font-weight: bolder;
 }
 a {
   /* background-color: grey; */
@@ -39,6 +41,7 @@ a {
   text-decoration: unset;
   color: black;
   animation: blinker 1s linear infinite;
+  font-weight: 900;
 }
 .blinker {
   animation: blinker 1s linear infinite;
@@ -51,7 +54,7 @@ a {
 
 #status,
 a,
-button {
+.replay {
   font-size: 20pt;
   font-family: "Shadows Into Light", cursive;
 }
