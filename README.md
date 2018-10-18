@@ -6,7 +6,7 @@ This is a Tic Tac Toe game with 2 player and score counter.
 
 ## **DEMO:**
 
-https://nouraalhadlaq.github.io/tic-tac-toe-project/land.html
+[**GAME Link**](https://nouraalhadlaq.github.io/tic-tac-toe-project/land.html)
 
 ## **Used Technologies:**
 
@@ -31,6 +31,6 @@ https://nouraalhadlaq.github.io/tic-tac-toe-project/land.html
 - Choose to play as X or O.
 - Audio
 
-## **Screen Shot:**
+## **Screenshot:**
 
-![](images/screenshot.png)
+![game screenshot](images/screenshot.png)
