@@ -15,7 +15,7 @@ https://nouraalhadlaq.github.io/tic-tac-toe-project/land.html
 - javascript
 - JQuery
 
-## **Links:**
+## **Credits:**
 
 - Sweatalert
 - Google Fonts
